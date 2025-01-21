@@ -1,0 +1,37 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main 
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin' 
+
+      # Build the project using Maven or Gradle (if applicable)
+
+      - name: Compile Java code
+        run: javac src/com/texteditor/TextEditor.java
+
+      - name: Run Java program
+        run: java -cp src com.texteditor.TextEditor
+
+      # Run tests (if you have a testing framework like JUnit)
+      # Example for JUnit:
+      # - name: Run tests
+      #   run: java -cp src:lib/junit-<version>.jar org.junit.runner.JUnitCore com.texteditor.TestTextEditor
