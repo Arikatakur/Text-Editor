@@ -1,12 +1,14 @@
-package com.texteditor; 
-
-import javax.swing.*;
+package com.texteditor;
 
 public class TextEditor {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Text Editor");
-        frame.setSize(800,600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        // Enable headless mode
+        System.setProperty("java.awt.headless", "true");
+
+        // Print a message to confirm the program is running
+        System.out.println("Text Editor application started in headless mode!");
+
+        // Perform non-GUI operations here
+        System.out.println("Performing text editing tasks...");
     }
 }
