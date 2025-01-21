@@ -1,0 +1,7 @@
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+to_add.txt
