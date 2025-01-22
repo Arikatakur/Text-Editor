@@ -25,11 +25,11 @@ jobs:
 
       # Build the project using Maven or Gradle (if applicable)
 
-      - name: Compile Java code
-        run: javac src/com/texteditor/TextEditor.java
+      - name: Build with Maven
+        run: mvn clean package
 
       - name: Run Java program
-        run: java -cp src com.texteditor.TextEditor
+        run: mvn exec:java -Dexec.mainClass="com.texteditor.Main"
 
       # Run tests (if you have a testing framework like JUnit)
       # Example for JUnit:
