@@ -10,14 +10,11 @@ public class Main {
             System.out.println(MainConstants.HEADLESS_RUN);
         } else {
 
-                    //main frame
             JFrame frame = new JFrame("Text Editor");
-                    //TextArea
             JTextArea textArea = new JTextArea();
-                    //scrollPane
             JScrollPane scrollPane = new JScrollPane(textArea);
-                    //menu
             JMenuBar menuBar = new JMenuBar();
+
             JMenu fileMenu = new JMenu("File");
             JMenuItem newItem = new JMenuItem("New");
             JMenuItem openItem = new JMenuItem("Open");
@@ -28,7 +25,18 @@ public class Main {
             fileMenu.add(saveItem);
             fileMenu.addSeparator();
             fileMenu.add(exitItem);
+
             menuBar.add(fileMenu);
+
+            JMenu editMenu = new JMenu("Edit");
+            JMenuItem cutItem = new JMenuItem("Cut");
+            JMenuItem copyItem = new JMenuItem("Copy");
+            JMenuItem pasteItem = new JMenuItem("Paste");
+            editMenu.add(cutItem);
+            editMenu.add(copyItem);
+            editMenu.add(pasteItem);
+
+            menuBar.add(editMenu);
 
 
             frame.setJMenuBar(menuBar);
