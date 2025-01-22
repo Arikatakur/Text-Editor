@@ -43,6 +43,13 @@ public class Main {
             frame.add(scrollPane, BorderLayout.CENTER);
             frame.add(saveAndSubmitButton, BorderLayout.SOUTH);
 
+            saveAndSubmitButton.addActionListener(e -> {
+                FileManager.saveAndSubmit(textArea.getText());
+                System.exit(0);
+            });
+
+            newItem.addActionListener(e -> FileManager.handleNewAction(frame, textArea));
+
             frame.setSize(800, 600);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
