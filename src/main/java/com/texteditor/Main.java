@@ -1,6 +1,5 @@
 package com.texteditor;
 
-import com.texteditor.MainConstants;
 import javax.swing.*;
 
 public class Main {
