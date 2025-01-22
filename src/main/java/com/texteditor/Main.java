@@ -25,7 +25,6 @@ public class Main {
             fileMenu.add(saveItem);
             fileMenu.addSeparator();
             fileMenu.add(exitItem);
-
             menuBar.add(fileMenu);
 
             JMenu editMenu = new JMenu("Edit");
@@ -35,13 +34,14 @@ public class Main {
             editMenu.add(cutItem);
             editMenu.add(copyItem);
             editMenu.add(pasteItem);
-
             menuBar.add(editMenu);
 
+            JButton saveAndSubmitButton = new JButton("Save and Submit");
 
             frame.setJMenuBar(menuBar);
             frame.setLayout(new BorderLayout());
             frame.add(scrollPane, BorderLayout.CENTER);
+            frame.add(saveAndSubmitButton, BorderLayout.SOUTH);
 
             frame.setSize(800, 600);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
